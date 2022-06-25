@@ -49,8 +49,7 @@ allprojects {
 
 ```
 dependencies {
-            //还未修改
-	        implementation 'com.github.Xingzuo888:CircleProgress:v1.0'
+	        implementation 'com.github.huihui2286433852:CircleProgressView:1.0.1'
 	}
 ```
 
