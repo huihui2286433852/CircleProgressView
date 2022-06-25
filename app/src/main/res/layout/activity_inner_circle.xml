@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#9E7979"
+        android:orientation="vertical"
+        tools:context=".innerCircle">
+
+        <com.example.circleprogress.CircleProgressView
+            android:id="@+id/progress_true"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            app:cpv_background_circle_color="#40B9F9"
+            app:cpv_background_circle_width="40dp"
+            app:cpv_circle_color="#B052FF"
+            app:cpv_circle_width="50dp"
+            app:cpv_first_from_second="50"
+            app:cpv_inner_circle_color="#8DDAFF"
+            app:cpv_isShowInnerCircle="false"
+            app:cpv_outside_ring_color="#FFFFFF"
+            app:cpv_outside_ring_width="1dp"
+            app:cpv_text_color="#FFFFFF"
+            app:cpv_text_size="0"
+            app:cpv_text_suffix="%"
+            app:cpv_tip_text="已占用"
+            app:cpv_tip_text_color="#FFFFFF"
+            app:cpv_tip_text_size="0"
+            app:cpv_isShowOutCircle="false"
+            />
+
+        <com.example.circleprogress.CircleProgressView
+            android:id="@+id/progress_false"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            app:cpv_background_circle_color="#40B9F9"
+            app:cpv_background_circle_width="50dp"
+            app:cpv_circle_color="#B052FF"
+            app:cpv_circle_width="50dp"
+            app:cpv_first_from_second="50"
+            app:cpv_inner_circle_color="#8DDAFF"
+            app:cpv_isShowInnerCircle="false"
+            app:cpv_outside_ring_color="#FFFFFF"
+            app:cpv_outside_ring_width="1dp"
+            app:cpv_text_color="#FFFFFF"
+            app:cpv_text_size="40"
+            app:cpv_text_suffix="%"
+            app:cpv_tip_text="已占用"
+            app:cpv_tip_text_color="#FFFFFF"
+            app:cpv_tip_text_size="26" />
+    </LinearLayout>
+</ScrollView>

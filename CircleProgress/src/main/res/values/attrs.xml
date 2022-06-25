@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 圆形进度条-->
+    <declare-styleable name="CircularProgressView">
+        <attr name="cpv_text_prefix" format="string" />
+        <attr name="cpv_text_suffix" format="string" />
+        <attr name="cpv_progress" format="integer" />
+        <attr name="cpv_max_progress" format="integer" />
+        <attr name="cpv_circle_color" format="color" />
+        <attr name="cpv_inner_circle_color" format="color" />
+        <attr name="cpv_outside_ring_color" format="color" />
+        <attr name="cpv_background_circle_color" format="color" />
+        <attr name="cpv_text_color" format="color" />
+        <attr name="cpv_text_size" format="integer" />
+        <attr name="cpv_text_bold" format="boolean" />
+        <attr name="cpv_tip_text_color" format="color" />
+        <attr name="cpv_tip_text_size" format="integer" />
+        <attr name="cpv_tip_text" format="string" />
+        <attr name="cpv_circle_width" format="dimension" />
+        <attr name="cpv_outside_ring_width" format="dimension" />
+        <attr name="cpv_background_circle_width" format="dimension" />
+        <attr name="cpv_first_from_second" format="integer" />
+        <attr name="cpv_isShowOutCircle" format="boolean" />
+        <attr name="cpv_isShowInnerCircle" format="boolean" />
+        <attr name="cpv_isProgressGradient" format="boolean" />
+        <attr name="cpv_progressStart" format="color" />
+        <attr name="cpv_progressEnd" format="color" />
+    </declare-styleable>
+</resources>
