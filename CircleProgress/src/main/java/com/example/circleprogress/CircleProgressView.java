@@ -10,6 +10,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
@@ -201,6 +202,8 @@ public class CircleProgressView extends View {
         mProgressEndColor = Color.GREEN;
     }
 
+    float angle = 0f;
+
     /**
      * 绘画圆、圆弧、文本
      *
@@ -217,7 +220,7 @@ public class CircleProgressView extends View {
         canvas.drawOval(mSecondRectF, mBackgroundPaint);
 
         // Draw Circle
-        float angle = 360 * mProgress / mMaxProgress;
+        angle = 360 * mProgress / mMaxProgress;
         if (isProgressGradient) {
             for (int i = 0; i < angle; i++) {
                 if (i < 180) {
@@ -495,7 +498,7 @@ public class CircleProgressView extends View {
      * @return
      */
     public String getTextPrefix() {
-        return mTextPrefix != null ? mTextPrefix : "";
+        return !TextUtils.isEmpty(mTextPrefix) ? mTextPrefix : "";
     }
 
     /**
@@ -514,7 +517,7 @@ public class CircleProgressView extends View {
      * @return
      */
     public String getTextSuffix() {
-        return mTextSuffix != null ? mTextSuffix : "";
+        return !TextUtils.isEmpty(mTextSuffix) ? mTextSuffix : "";
     }
 
     /**
@@ -723,7 +726,7 @@ public class CircleProgressView extends View {
      */
     public void setProgress(float progress) {
         this.mProgress = (progress <= mMaxProgress) ? progress : mMaxProgress;
-        mTextView.setText(mTextPrefix + String.valueOf(Math.round((mProgress / mMaxProgress) * 100)) + mTextSuffix);
+        mTextView.setText(getTextPrefix() + Math.round((mProgress / mMaxProgress) * 100) + getTextSuffix());
         showTextView(mIsTextEnabled);
         invalidate();
 
@@ -788,9 +791,9 @@ public class CircleProgressView extends View {
         objectAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
-                mTextView.setText(mTextPrefix +
-                        String.valueOf(Math.round((((Float) animation.getAnimatedValue()) / mMaxProgress) * 100)) +
-                        mTextSuffix);
+                mTextView.setText(getTextPrefix() +
+                        Math.round((((Float) animation.getAnimatedValue()) / mMaxProgress) * 100) +
+                        getTextSuffix());
             }
         });
         objectAnimator.start();

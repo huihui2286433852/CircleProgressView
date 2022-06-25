@@ -10,17 +10,17 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="isOutCircle"
+        android:text="是否显示外圆环"
         android:onClick="outCircle" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="isInnerCircle"
+        android:text="是否圆环内是否填充"
         android:onClick="innerCircle" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="isProgressGradient"
+        android:text="是否显示渐变色"
         android:onClick="progressGradient" />
 
 </LinearLayout>
